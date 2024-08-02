@@ -3,6 +3,10 @@ import java.util.List;
 
 public class Aquarium {
 
+	public Aquarium() {
+		super();
+	}
+
 	private List<String> types;
 	private List<String> noms;
 	private List<String> comportements;

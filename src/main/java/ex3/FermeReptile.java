@@ -1,7 +1,7 @@
 package ex3;
 import java.util.List;
 
-public class FermeReptile {
+public class FermeReptile implements Zone {
 
 	private List<String> types;
 	private List<String> noms;
@@ -12,7 +12,12 @@ public class FermeReptile {
 		noms.add(nomAnimal);
 		comportements.add(comportement);
 	}
-	
+
+	@Override
+	public void addAnimal(Animal animal) {
+
+	}
+
 	public void afficherListeAnimaux(){
 		for (String nom: noms){
 			System.out.println(nom);

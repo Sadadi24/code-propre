@@ -6,25 +6,16 @@ public class Zoo {
 	private ZoneCarnivore zoneCarnivore;
 	private FermeReptile fermeReptile;
 	private Aquarium aquarium;
-	
-	public Zoo(String nom){
+
+	public Zoo(String nom) {
 		this.nom = nom;
+		this.savaneAfricaine = new SavaneAfricaine();
+		this.zoneCarnivore = new ZoneCarnivore();
+		this.fermeReptile = new FermeReptile();
+		this.aquarium = new Aquarium();
 	}
-	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-	}
+
+
 	
 	public void afficherListeAnimaux(){
 		savaneAfricaine.afficherListeAnimaux();
